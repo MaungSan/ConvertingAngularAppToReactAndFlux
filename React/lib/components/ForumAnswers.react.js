@@ -1,5 +1,12 @@
 var ForumAnswers = React.createClass({
-    displayName: "ForumAnswers",
+    displayName: 'ForumAnswers',
+
+    _onMarkCorrect: function (id) {
+        ForumDispatcher.dispatch({
+            actionType: 'FORUM_ANSWER_MARKED_CORRECT',
+            id: id
+        });
+    },
 
     render: function () {
 
@@ -7,11 +14,11 @@ var ForumAnswers = React.createClass({
         var answers = [];
 
         for (var key in allAnswers) {
-            answers.push(React.createElement(ForumAnswer, { key: key, id: key, answer: allAnswers[key] }));
+            answers.push(React.createElement(ForumAnswer, { key: key, id: key, answer: allAnswers[key], onMarkCorrect: this._onMarkCorrect }));
         }
 
         return React.createElement(
-            "div",
+            'div',
             null,
             answers
         );
