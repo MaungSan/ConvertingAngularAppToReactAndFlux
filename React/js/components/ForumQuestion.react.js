@@ -1,5 +1,5 @@
 var ForumQuestion = React.createClass({
-
+    
     render: function() {
         return (
             <div>
@@ -8,7 +8,7 @@ var ForumQuestion = React.createClass({
                     I don't understand React or Flux. Can someone help me?
                 </p>
             </div>
-        )
+            );
     }
-
+    
 });

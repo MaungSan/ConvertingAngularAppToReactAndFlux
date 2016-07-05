@@ -1,10 +1,8 @@
-var ENTER_KEY_CODE = 13;
-
 var ForumAddAnswerBox = React.createClass({
     
     getInitialState: function() {
         return {
-          value: ''
+            value: ''
         };
     },
     
@@ -15,7 +13,7 @@ var ForumAddAnswerBox = React.createClass({
     render: function() {
         return (
             <div>
-                <textarea id="addAnswer" className="col-md-6 col-xs-8" onChange={this._onChange}></textarea>
+                <textarea id="addAnswer" className="col-md-6 col-xs-8" onChange={ this._onChange }></textarea>
                 &nbsp;<input type="button" className="btn btn-primary" value="Add" onClick={ this._addAnswer } />
             </div>
         )
@@ -23,8 +21,8 @@ var ForumAddAnswerBox = React.createClass({
     
     _onChange: function(event) {
         this.setState({
-          value: event.target.value
+           value: event.target.value 
         });
-    },
+    }
 
 });

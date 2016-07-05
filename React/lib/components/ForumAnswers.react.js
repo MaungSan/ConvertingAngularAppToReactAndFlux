@@ -1,11 +1,8 @@
 var ForumAnswers = React.createClass({
-    displayName: 'ForumAnswers',
+    displayName: "ForumAnswers",
 
     _onMarkCorrect: function (id) {
-        ForumDispatcher.dispatch({
-            actionType: 'FORUM_ANSWER_MARKED_CORRECT',
-            id: id
-        });
+        ForumActions.markAnswerCorrect(id);
     },
 
     render: function () {
@@ -18,7 +15,7 @@ var ForumAnswers = React.createClass({
         }
 
         return React.createElement(
-            'div',
+            "div",
             null,
             answers
         );

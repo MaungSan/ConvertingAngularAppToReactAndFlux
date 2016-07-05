@@ -1,7 +1,8 @@
 var ForumHeader = React.createClass({
-
+    
     render: function() {
-        return (
+
+        return ( 
             <nav className="navbar navbar-default">
               <div className="container-fluid">
                 <div className="navbar-header">
@@ -11,7 +12,8 @@ var ForumHeader = React.createClass({
                 </div>
               </div>
             </nav>
-        )
+            );
+        
     }
 
 });

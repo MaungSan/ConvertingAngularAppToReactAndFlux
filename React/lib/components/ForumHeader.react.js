@@ -2,6 +2,7 @@ var ForumHeader = React.createClass({
   displayName: "ForumHeader",
 
   render: function () {
+
     return React.createElement(
       "nav",
       { className: "navbar navbar-default" },
